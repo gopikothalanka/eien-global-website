@@ -47,8 +47,7 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: "Eien Global <onboarding@resend.dev>",
-      to: ["mail2gvrm@gmail.com"],
-      // to: ["info@eienglobal.com"],
+      to: ["info@eienglobal.com"],
       subject: `New Query Form Submission from ${name}`,
       html: `
         <h2>New Message</h2>
