@@ -17,7 +17,7 @@ export function ProductFocus() {
         <SectionHeading
           eyebrow="Product Focus"
           title="Category expertise aligned with your import strategy"
-          description="Our portfolio is shaped around repeatable quality, scalable supply, and market relevance for B2B buyers."
+          description="Our portfolio is shaped around repeatable quality, scalable supply, and market relevance for buyers."
         />
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

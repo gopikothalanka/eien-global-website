@@ -6,8 +6,9 @@ import { Container } from "@/components/ui/container";
 
 const slides = [
   {
-    eyebrow: "B2B Export Partner",
-    title: "Reliable sourcing and export operations for growth-focused businesses",
+    eyebrow: "Export Partner",
+    title:
+      "Reliable sourcing and export operations for growth-focused businesses",
     subtitle:
       "Work with a partner that combines supplier rigor, transparent execution, and on-time delivery performance.",
     cta: { label: "Explore Product Categories", href: "#products" },
@@ -51,7 +52,9 @@ export function Hero() {
         <div
           key={slide.title}
           className={`absolute inset-0 transition-opacity duration-700 ${
-            activeIndex === index ? "opacity-100" : "pointer-events-none opacity-0"
+            activeIndex === index
+              ? "opacity-100"
+              : "pointer-events-none opacity-0"
           } ${slide.bgClass}`}
           aria-hidden={activeIndex !== index}
         />

@@ -6,7 +6,7 @@ export function Footer() {
       <Container>
         <div className="flex flex-col gap-4 text-sm text-[#475569] sm:flex-row sm:items-center sm:justify-between">
           <p>
-            <span className="font-semibold text-[#020617]">Eien Global</span> · B2B
+            <span className="font-semibold text-[#020617]">Eien Global</span> ·
             Export Partner
           </p>
           <p>© {new Date().getFullYear()} Eien Global. All rights reserved.</p>

@@ -1,6 +1,5 @@
 import { Capabilities } from "@/components/sections/capabilities";
 import { Cta } from "@/components/sections/cta";
-import { Footer } from "@/components/sections/footer";
 import { Hero } from "@/components/sections/hero";
 import { Process } from "@/components/sections/process";
 import { ProductFocus } from "@/components/sections/product-focus";
@@ -19,7 +18,6 @@ export default function Home() {
         <Quality />
         <Cta />
       </main>
-      <Footer />
     </div>
   );
 }
