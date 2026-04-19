@@ -62,19 +62,12 @@ export function Header() {
           <div className="group relative">
             <span
               className={cn(
-                "inline-flex items-center gap-1 text-sm font-medium text-[#475569] cursor-pointer",
-                isActivePath("/products") && "font-semibold text-[#020617]",
+                "inline-flex items-center gap-1 pb-[2px] text-sm font-medium text-[#475569] cursor-pointer border-b-2 border-transparent",
+                isActivePath("/products") &&
+                  "text-[#1D4ED8] font-semibold border-[#3B82F6]",
               )}
             >
-              <span
-                className={cn(
-                  isActivePath("/products") &&
-                    "border-b-2 border-[#3B82F6] pb-[2px]",
-                )}
-              >
-                Products
-              </span>
-
+              Products
               <span className="text-xs text-[#64748B]">▾</span>
             </span>
 
