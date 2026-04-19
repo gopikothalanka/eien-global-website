@@ -15,29 +15,25 @@ const navItems = [{ label: "Contact", href: "/contact-us" }];
 export function Header() {
   const pathname = usePathname();
 
-  const normalizePath = (path: string) => {
-    const cleanPath = path.split(/[?#]/)[0] || "/";
+  // const normalizePath = (path: string) => {
+  //   const cleanPath = path.split(/[?#]/)[0] || "/";
 
-    if (cleanPath === "/") {
-      return "/";
-    }
+  //   if (cleanPath === "/") {
+  //     return "/";
+  //   }
 
-    return cleanPath.replace(/\/+$/, "");
-  };
+  //   return cleanPath.replace(/\/+$/, "");
+  // };
 
-  const currentPath = normalizePath(pathname ?? "/");
-
+  // const currentPath = normalizePath(pathname ?? "/");
   const isActivePath = (href: string) => {
-    const normalizedHref = normalizePath(href);
+    if (!pathname) return false;
 
-    if (normalizedHref === "/") {
-      return currentPath === "/";
+    if (href === "/") {
+      return pathname === "/";
     }
 
-    return (
-      currentPath === normalizedHref ||
-      currentPath.startsWith(`${normalizedHref}/`)
-    );
+    return pathname === href || pathname.startsWith(href + "/");
   };
 
   return (
@@ -62,13 +58,19 @@ export function Header() {
           <div className="group relative">
             <span
               className={cn(
-                "inline-flex items-center gap-1 pb-[2px] text-sm font-medium text-[#475569] cursor-pointer border-b-2 border-transparent",
-                isActivePath("/products") &&
-                  "text-[#1D4ED8] font-semibold border-[#3B82F6]",
+                "inline-flex cursor-default items-center gap-1 pb-[2px] text-sm font-medium transition-colors",
+                isActivePath("/products")
+                  ? "border-b-2 border-[#3B82F6] font-semibold text-[#1D4ED8]"
+                  : "border-b-2 border-transparent text-[#475569]",
               )}
             >
               Products
-              <span className="text-xs text-[#64748B]">▾</span>
+              <span
+                className="text-xs text-[#64748B] transition-transform group-hover:rotate-180"
+                aria-hidden
+              >
+                ▾
+              </span>
             </span>
 
             <div className="invisible absolute left-0 top-full z-50 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
