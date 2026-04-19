@@ -9,6 +9,7 @@ type FormData = {
 	email: string;
 	phone: string;
 	city: string;
+  	country: string;
 	enquiry: string;
 };
 
@@ -20,18 +21,19 @@ const initialState: FormData = {
   phone: "",
   city: "",
   enquiry: "",
+  country: "",
 };
 const contactDetails = {
-	headOffice: [
+	office: [
 		"Do.No. 102-6-27, Dwaraka nagar, ",
 		"Bommuru, Rajahmundry,",
 		"East Godavari, Andhra Pradesh 533124 India.",
 	],
-	factoryAddress: [
-		"Survey No 132/A/3, 131/B/1/2, 132/A, 133/A/1/1/2, 132/B, 132,",
-		"Thodellagudem (V), Dornakal Mandal,",
-		"Mahabubabad District, Telangana 506381 India.",
-	],
+	// factoryAddress: [
+	// 	"Survey No 132/A/3, 131/B/1/2, 132/A, 133/A/1/1/2, 132/B, 132,",
+	// 	"Thodellagudem (V), Dornakal Mandal,",
+	// 	"Mahabubabad District, Telangana 506381 India.",
+	// ],
 	phone: "+91 94946 38430",
 	emails: ["info@eienglobal.com",],
 };
@@ -41,6 +43,7 @@ const formFields = [
 	{ label: "Email*", type: "email", name: "email" },
 	{ label: "Phone*", type: "tel", name: "phone" },
 	{ label: "City*", type: "text", name: "city" },
+	{ label: "Country*", type: "text", name: "country" },
 ] as const;
 
 export default function ContactUsPage() {
@@ -164,13 +167,13 @@ export default function ContactUsPage() {
 			<section className="py-16 md:py-20">
 				<Container>
 					<div className="grid gap-10 lg:grid-cols-[1fr_420px]">
-						<div className="space-y-8">
+						<div className="space-y-5">
 							<div className="border-b border-[#E2E8F0] pb-7">
 								<h2 className="font-[family-name:var(--font-sora)] text-lg font-semibold text-[#0B1220]">
-									Head Office:
+									Office:
 								</h2>
 								<div className="mt-3 space-y-1 text-sm leading-7 text-[#475569]">
-									{contactDetails.headOffice.map((line) => (
+									{contactDetails.office.map((line) => (
 										<p key={line}>{line}</p>
 									))}
 								</div>

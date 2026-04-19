@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
+import burgerIcon from "@/assets/icons/burger.svg";
+import closeIcon from "@/assets/icons/close.svg";
 
 const navItems = [
   // { label: "About", href: "#about" },
@@ -46,8 +48,22 @@ export function Header() {
             className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md border border-[#E2E8F0] text-[#0B1220] marker:content-none"
             aria-label="Toggle navigation menu"
           >
-            <span className="group-open:hidden">Menu</span>
-            <span className="hidden group-open:inline">Close</span>
+            <Image
+              src={burgerIcon}
+              alt=""
+              width={20}
+              height={20}
+              className="group-open:hidden"
+              aria-hidden
+            />
+            <Image
+              src={closeIcon}
+              alt=""
+              width={20}
+              height={20}
+              className="hidden group-open:inline"
+              aria-hidden
+            />
           </summary>
 
           <div className="absolute right-0 top-12 w-72 rounded-lg border border-[#E2E8F0] bg-white p-4 shadow-lg">

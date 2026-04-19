@@ -8,6 +8,7 @@ type ContactPayload = {
   phone?: string;
   city?: string;
   enquiry?: string;
+  country?: string;
 };
 
 function isValidEmail(email: string) {
@@ -30,8 +31,9 @@ export async function POST(req: Request) {
     const phone = body.phone?.trim() ?? "";
     const city = body.city?.trim() ?? "";
     const enquiry = body.enquiry?.trim() ?? "";
+    const country = body.country?.trim() ?? "";
 
-    if (!name || !email || !phone || !city || !enquiry) {
+    if (!name || !email || !phone || !city || !enquiry || !country) {
       return Response.json(
         { success: false, error: "All fields are required." },
         { status: 400 },
@@ -55,6 +57,7 @@ export async function POST(req: Request) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>City:</strong> ${city}</p>
+        <p><strong>Country:</strong> ${country}</p>
         <p><strong>Enquiry:</strong> ${enquiry}</p>
       `,
     });
