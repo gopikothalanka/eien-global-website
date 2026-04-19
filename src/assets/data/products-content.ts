@@ -78,7 +78,57 @@ export const products: Product[] = [
       type: "Cocoa Derivatives",
       forms: ["Powder", "Butter"],
       processing: "Bean extraction and refinement",
-      origin: "Imported / India",
+      origin: "India",
     },
+  },
+  {
+    slug: "garlic",
+    name: "Garlic",
+    category: "Agricultural Products",
+    shortDescription:
+      "Garlic is a widely used culinary ingredient known for its strong flavor, aroma, and medicinal properties.",
+    longDescription:
+      "Our garlic is sourced from premium farms in India and processed to maintain freshness, flavor, and nutritional value. It is widely used in cooking, food processing, and medicinal applications due to its natural antibacterial and health benefits. We ensure consistent quality suitable for both domestic and international markets.",
+    image: "/product-images/garlic.png",
+    applications: [
+      "Cooking and food preparation",
+      "Processed food industry",
+      "Medicinal and health products",
+      "Spice blends and seasonings",
+    ],
+    meta: {
+      type: "Vegetable",
+      forms: ["Whole", "Cloves", "Powder"],
+      processing: "Fresh / Dehydrated",
+      origin: "India",
+    },
+  },
+  {
+    slug: "cold-pressed-oils",
+    name: "Cold-Pressed Oils",
+    category: "Oil Products",
+    shortDescription:
+      "We supply premium cold-pressed oils including sesame, groundnut, mustard, and coconut oil, extracted naturally to retain nutrients, flavor, and aroma.",
+    longDescription:
+      "Our cold-pressed oils are extracted using traditional and modern low-temperature techniques that preserve natural nutrients, antioxidants, and essential fatty acids. These oils are unrefined, chemical-free, and ideal for health-conscious consumers and food applications. Known for their purity and rich flavor, our oils meet high-quality standards suitable for domestic and export markets.",
+    image: "/product-images/oils.png",
+    applications: [
+      "Cooking and culinary use",
+      "Health and wellness products",
+      "Ayurvedic and medicinal use",
+      "Cosmetics and skincare",
+    ],
+    meta: {
+      type: "Cold-Pressed Vegetable Oils",
+      forms: ["Liquid"],
+      processing: "Cold-pressed extraction",
+      origin: "India",
+    },
+    // variants: [
+    //   "Sesame Oil",
+    //   "Groundnut Oil",
+    //   "Mustard Oil",
+    //   "Coconut Oil"
+    // ]
   },
 ];
