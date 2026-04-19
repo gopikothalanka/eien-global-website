@@ -58,10 +58,10 @@ export function Header() {
           <div className="group relative">
             <span
               className={cn(
-                "inline-flex cursor-default items-center gap-1 pb-[2px] text-sm font-medium transition-colors",
+                "inline-flex cursor-default items-center gap-1 border-b-2 pb-1 text-sm font-medium transition-colors",
                 isActivePath("/products")
-                  ? "border-b-2 border-[#3B82F6] font-semibold text-[#1D4ED8]"
-                  : "border-b-2 border-transparent text-[#475569]",
+                  ? "border-[#3B82F6] font-semibold text-[#121314]"
+                  : "border-transparent text-[#475569] hover:text-[#020617]",
               )}
             >
               Products
@@ -103,10 +103,10 @@ export function Header() {
               href={item.href}
               aria-current={isActivePath(item.href) ? "page" : undefined}
               className={cn(
-                "inline-flex items-center pb-[2px] text-sm font-medium text-[#475569] transition-colors hover:text-[#020617]",
+                "inline-flex items-center border-b-2 pb-1 text-sm font-medium transition-colors",
                 isActivePath(item.href)
-                  ? "text-[#1D4ED8] font-semibold border-b-2 border-[#3B82F6]"
-                  : "border-b-2 border-transparent",
+                  ? "border-[#3B82F6] font-semibold text-[#121314]"
+                  : "border-transparent text-[#475569] hover:text-[#020617]",
               )}
             >
               {item.label}
