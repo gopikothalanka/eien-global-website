@@ -50,7 +50,7 @@ export function Header() {
             width={180}
             height={62}
             priority
-            className="h-14 w-auto"
+            className="h-20 w-auto"
           />
         </Link>
 
